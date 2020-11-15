@@ -1,5 +1,8 @@
-#Info
+# Info
 This is the Moshhi discord bot!
+Requires
+  - ffmpeg
+  - node 12v~
 
 ## Available Scripts
 Run npm install
