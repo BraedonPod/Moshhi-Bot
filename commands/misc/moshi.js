@@ -7,6 +7,7 @@ class MoshiCommand extends Commando.Command {
 			group: 'misc',
 			memberName: 'moshmosh',
 			description: 'moshi moshi!',
+			aliases: ['moshi', 'moshimoshi'],
 		});
 	}
 

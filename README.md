@@ -12,3 +12,7 @@ Runs the bot using nodemon and allows for quick refresh of the bot during develo
 
 ### Dev `npm run start`
 Used when deploying or production.
+
+## Testing
+Currently there is only testing when a user joins/leaves
+Commands: !testjoin and !testleave

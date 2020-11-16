@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js')
+const { MessageEmbed } = require('discord.js');
 const Commando = require('discord.js-commando');
 const axios = require('axios');
 
@@ -15,7 +15,7 @@ class CovidCommand extends Commando.Command {
 	async run(message, args) {
     let url;
     let results;
-
+    message.delete({ timeout: 500 });
     if(!args) return message.reply('Please specify which stats you want');
     if(args === 'all') {url = 'https://api.covid19api.com/summary';}
     else {url = `https://covid19.mathdro.id/api/countries/${args}`}

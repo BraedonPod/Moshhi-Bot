@@ -2,13 +2,13 @@ require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
 const Commando = require('discord.js-commando');
-// const { PREFIX, TOKEN } = require('./config.json');
 const loadFeatures = require('./features/load-features');
 
 const client = new Commando.CommandoClient({
     owner: process.env.OWNER,
     commandPrefix: process.env.PREFIX
 });
+client.queue = new Map();
 
 client.on('warn', console.warn)
     .on('error', console.error)
@@ -27,7 +27,9 @@ client.registry
     .registerGroups([
         ['misc', 'misc commands'],
         ['music', 'music commands'],
-        ['moderation', 'moderation commands']
+        ['radio', 'radio commands'],
+        ['moderation', 'moderation commands'],
+        ['testing', 'testing commands']
     ])
     .registerDefaults()
     .registerCommandsIn(path.join(__dirname, 'commands'));
