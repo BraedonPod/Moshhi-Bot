@@ -1,7 +1,7 @@
 const Commando = require('discord.js-commando');
 const { MessageAttachment } = require('discord.js');
 
-module.exports = class Flip extends Commando.Command {
+class Flip extends Commando.Command {
   constructor(client) {
     super(client, {
       name: 'flip',
@@ -22,3 +22,5 @@ module.exports = class Flip extends Commando.Command {
       });
   }
 }
+
+module.exports = Flip;

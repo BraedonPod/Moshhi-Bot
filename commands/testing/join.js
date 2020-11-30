@@ -1,6 +1,6 @@
 const Commando = require('discord.js-commando')
 
-module.exports = class SimJoinCommand extends Commando.Command {
+class SimJoinCommand extends Commando.Command {
   constructor(client) {
     super(client, {
       name: 'testjoin',
@@ -11,8 +11,10 @@ module.exports = class SimJoinCommand extends Commando.Command {
     })
   }
 
-  run = (message) => {
+  run = async (message) => {
     message.delete({ timeout: 500 });
-    this.client.emit('guildMemberAdd', message.member)
+    this.client.emit('guildMemberAdd', message.member);
   }
 }
+
+module.exports = SimJoinCommand;

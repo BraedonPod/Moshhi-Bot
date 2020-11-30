@@ -2,7 +2,7 @@ const { MessageAttachment } = require('discord.js');
 const Commando = require('discord.js-commando');
 const axios = require('axios');
 
-module.exports = class CatCommand extends Commando.Command {
+class CatCommand extends Commando.Command {
   constructor(client) {
     super(client, {
       name: 'kitty',
@@ -24,3 +24,5 @@ module.exports = class CatCommand extends Commando.Command {
     }
   }
 }
+
+module.exports = CatCommand;

@@ -1,6 +1,6 @@
 const Commando = require('discord.js-commando')
 
-module.exports = class SimLeaveCommand extends Commando.Command {
+class SimLeaveCommand extends Commando.Command {
   constructor(client) {
     super(client, {
       name: 'testleave',
@@ -11,8 +11,10 @@ module.exports = class SimLeaveCommand extends Commando.Command {
     })
   }
 
-  run = (message) => {
+  run = async (message) => {
     message.delete({ timeout: 500 });
     this.client.emit('guildMemberLeave', message.member)
   }
 }
+
+module.exports = SimLeaveCommand;

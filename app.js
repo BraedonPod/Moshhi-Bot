@@ -29,7 +29,8 @@ client.registry
         ['music', 'music commands'],
         ['radio', 'radio commands'],
         ['moderation', 'moderation commands'],
-        ['testing', 'testing commands']
+        ['testing', 'testing commands'],
+        ['instock', 'get stock levels of product']
     ])
     .registerDefaults()
     .registerCommandsIn(path.join(__dirname, 'commands'));
