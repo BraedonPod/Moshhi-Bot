@@ -12,7 +12,7 @@ class KickCommand extends Commando.Command {
 		});
 	}
 
-	async run(message) {
+	run = async (message) => {
 		const target = message.mentions.users.first();
 		if (!target) return message.reply('Please specify a User to kick');
 

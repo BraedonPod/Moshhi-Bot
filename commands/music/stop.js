@@ -11,7 +11,7 @@ class StopCommand extends Commando.Command {
 		});
 	}
 
-	async run(message) {
+	run = async (message) => {
 		const channel = message.member.voice.channel
 		message.delete({ timeout: 1000 });
     if (!channel)return message.reply("I'm sorry but you need to be in a voice channel to play music!");

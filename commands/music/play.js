@@ -14,7 +14,7 @@ class PlayCommand extends Commando.Command {
     });
   }
 
-  async run(message, args) {
+  run = async (message, args) => {
     const { voice } = message.member;
     const channel = message.member.voice.channel;
     message.delete({ timeout: 2000 });

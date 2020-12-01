@@ -19,8 +19,7 @@ module.exports = class TestScrapeCommand extends Commando.Command {
       const { data } = await axios.get(process.env.SCRAPE_API);
       console.log(data);
     } catch (error) {
-      
+
     }
-    
   }
 }

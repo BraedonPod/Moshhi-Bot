@@ -12,7 +12,7 @@ class SongRadioCommand extends Commando.Command {
 		});
 	}
 
-	async run(message) {
+	run = async (message) => {
     const { voice } = message.member
     if(!voice.channelID) return message.reply('You must be in a voice channel');
     if(voice.channelID !== message.guild.me.voice.channelID) {

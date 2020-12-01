@@ -19,7 +19,7 @@ class CatCommand extends Commando.Command {
       const attachment = new MessageAttachment(data.file);
       message.delete({ timeout: 500 });
       message.channel.send(attachment);
-    } catch(err) {
+    } catch (err) {
       console.log(err.response);
     }
   }

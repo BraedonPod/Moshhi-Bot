@@ -12,7 +12,7 @@ class QueueCommand extends Commando.Command {
 		});
 	}
 
-	async run(message, args) {
+	run = async (message, args) => {
     const serverQueue = message.client.queue.get(message.guild.id);
     message.delete({ timeout: 1000 });
     if (!serverQueue) return message.channel.send("There is nothing playing in this server.");

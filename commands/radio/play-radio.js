@@ -10,7 +10,7 @@ class PlayRadioCommand extends Commando.Command {
 		});
 	}
 
-	async run(message) {
+	run = async (message) => {
     const { voice } = message.member
 		if(!voice.channelID) {
 			message.delete({ timeout: 1000 });

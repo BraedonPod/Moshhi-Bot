@@ -11,7 +11,7 @@ class SkipCommand extends Commando.Command {
 		});
 	}
 
-	async run(message) {
+	run = async (message) => {
     const channel = message.member.voice.channel;
     if (!channel)return message.reply("You need to be in a voice channel to play music!");
     const serverQueue = message.client.queue.get(message.guild.id);

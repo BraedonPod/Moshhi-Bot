@@ -11,8 +11,8 @@ class MoshiCommand extends Commando.Command {
 		});
 	}
 
-	async run(message) {
-    message.reply('moshi moshi!');
+	run = async (message) => {
+		message.reply('moshi moshi!');
 	}
 }
 
