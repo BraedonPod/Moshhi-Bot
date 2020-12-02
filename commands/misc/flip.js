@@ -1,3 +1,4 @@
+require('dotenv').config();
 const Commando = require('discord.js-commando');
 const { MessageAttachment } = require('discord.js');
 
@@ -15,7 +16,7 @@ class Flip extends Commando.Command {
   //Fix this up as it's really slow
   run = async (message) => {
     message.delete({ timeout: 1000 });
-    const attachment = new MessageAttachment('https://cdn.discordapp.com/attachments/554363703156277277/777632536092082176/flip.gif');
+    const attachment = new MessageAttachment(process.env.FLIP);
     message.channel.send(attachment)
       .then(msg => {
         msg.delete({ timeout: 9000 });
